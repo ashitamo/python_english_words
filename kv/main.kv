@@ -1,0 +1,36 @@
+#:include kv/home.kv
+#:include kv/setting.kv
+#:include kv/wordlist.kv
+#:include kv/words.kv
+
+FloatLayout:
+    id: main_layout
+    #cols:1
+    Screen_Manager:
+        # pos_hint:{'x':1, 'y':1}
+        # size_hint: 1,1
+        id: screen_manager
+        HomeScreen:
+            name: "home_screen"
+            id: home_screen
+        Setting:
+            name: "settings_screen"
+            id: settings_screen
+        WordListScreen:
+            name: "wordlist_screen"
+            id: wordlist_screen
+        WordsScreen:
+            name: "words_screen"
+            id:words_screen
+    Button:
+        text:"back"
+        id:back
+        on_release:
+            app.back()
+        size_hint:.1, .05
+        pos_hint:{'top': 0.97,'right':0.12}
+
+    # FloatLayout:
+    #     id:cheak_back_floatlayout
+    #     pos_hint:{'x':.5, 'y':.5}
+    #     size_hint: .4,.4

@@ -1,0 +1,46 @@
+
+<HomeScreen>
+    FloatLayout:
+        id:homefloatlayout
+        canvas:
+            Rectangle:
+                source: 'img/backgroung.png'
+                pos: self.pos
+                size: self.size          
+        Button:
+            id:bu1
+            text:"1"
+            pos_hint:{'x':.175, 'y':.7}
+            size_hint: .25,.2
+            on_release:
+                app.switch('wordlist_screen')
+        Button:
+            id:bu2
+            text:"2"
+            pos_hint:{'x':.575, 'y':.7}
+            size_hint: .25,.2
+        Button:
+            id:bu3
+            text:"3"
+            pos_hint:{'x':.175, 'y':.4}
+            size_hint: .25,.2
+        Button:
+            id:bu4
+            text:"4"
+            pos_hint:{'x':.575, 'y':.4}
+            size_hint: .25,.2
+        Button:
+            id:bu5
+            text:"5"
+            pos_hint:{'x':.175, 'y':.1}
+            size_hint: .25,.2
+        Button:
+            id:bu6
+            text:"6"
+            pos_hint:{'x':.575, 'y':.1}
+            size_hint: .25,.2
+        FloatLayout:
+            id:cheak_back_floatlayout
+            pos_hint:{'x':.5, 'y':.5}
+            size_hint: .4,.4
+            

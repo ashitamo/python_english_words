@@ -1,0 +1,12 @@
+class 
+kv 
+attribute err
+HomeScreen:
+            name: "home_screen"
+            id: home_screen
+        Setting:
+            name: "settings_screen"
+            id: settings_screen
+        WordScreen:
+            name: "word_screen"
+            id: word_screen
