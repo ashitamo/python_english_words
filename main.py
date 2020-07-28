@@ -38,7 +38,7 @@ class WordsScreen(Screen):
     pass
 
 GUI=Builder.load_file('kv/main.kv')
-kivy.resources.resource_add_path("./container_kvs")
+kivy.resources.resource_add_path("./font/")
 font1 = kivy.resources.resource_find("msgothic.ttc")
 
 class Main(App):
@@ -90,17 +90,21 @@ class Main(App):
         screen_manager = self.root.ids['screen_manager']
         counterlist=[]
         scroll_layout=self.root.ids['words_screen'].ids['Words_scroll_layout']
-        # with open('./words/1.txt','r',encoding='utf8') as rq:
-        #     lines=rq.readlines()
-        # for i in range(0,len(lines),1):
-        #     wordlist=lines[i].split()
-        #     for j in range(0,len(wordlist),1):
-        #         if wordlist[j][0]=='#':
-        #             counterlist.append(j)
-        #     Words(wordsfile=wordsfile,counterlist=counterlist,wordlist=wordlist,
-        #     counter=i)
-        for _ in range(50):
-            scroll_layout.add_widget(Words())
+        
+        with open('./words/1.txt','r',encoding='utf8') as rq:
+            lines=rq.readlines()
+        for i in range(0,len(lines),1):
+            a=lines[i].split('#')
+            for j in range(len(a)):
+                wordlist=a[j].split()
+                w=Words(wordsfile=wordsfile,counterlist=counterlist,wordlist=wordlist,
+                counter=i)
+                scroll_layout.add_widget(w)
+        
+        
+        # for _ in range(1):
+        #     scroll_layout.add_widget(Words())
+
         screen_manager.current="words_screen"
         #print(scroll_layout.Label)
 

@@ -1,4 +1,4 @@
-1.air_conditioner n._空氣調節機_冷氣機 air_conditioning n._空調
-2.system n._系統 n._制度
+1.air_conditioner n._空氣調節機_冷氣機#air_conditioning n._空調
+2.system n._系統_制度
 3.bravery n._勇敢
-4.program n._節目 n._程式 vt.進行程序設定
+4.program n._節目_程式 vt._進行程序設定

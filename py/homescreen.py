@@ -8,12 +8,13 @@ import kivy.utils
 
 class homelebel(Label):
     pass
-
+class backlayout(FloatLayout):
+    pass
 class homebutton(object):
     def __init__(self,**kwarg):
         super(homebutton,self).__init__()
-        kivy.resources.resource_add_path("./container_kvs")
-        font1 = kivy.resources.resource_find("msgothic.ttc")
+        kivy.resources.resource_add_path("./font/")
+        font1 = kivy.resources.resource_find("bold.ttc")
         value=['單字庫','','','','','']
         for i in range(6):
             bu=kwarg['homescreen']['bu'+str(i+1)]

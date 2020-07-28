@@ -88,8 +88,14 @@ import re
 # with open('./words/1.txt','r',encoding='utf8') as rq:
 #     lines=rq.readlines()
 # print(lines[0].count(' '))
-s="xdwwdwdwdwdwd"
-print(s[1:])
+# s="xdwwdwdwdwdwd"
+# print(s[1:])
+with open('./words/1.txt','r',encoding='utf8') as rq:
+            lines=rq.readlines()
+for i in range(0,len(lines),1):
+        #a=re.search('(.*)#(.*?)',lines[i])
+        wordlist=lines[i].split('#')
+        print(wordlist)
 
 # with open('w.txt','w',encoding='utf8') as rw:
 #     for w in range(97, 123):
